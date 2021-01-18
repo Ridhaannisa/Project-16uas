@@ -1,0 +1,3 @@
+<p class="lead"><strong class="text-dark">Rp. {{$produk->harga}} </strong></p>
+	<p class="lead"><strong class="text-dark">Stok <b>{{$produk->stok}}</b> | Berat : {{$produk->berat}} kg | Seller : {{$produk->seller->nama}} | Tanggal produk : {{$produk->created_at->diffForHumans()}} </strong></p>
+	<p>Kategori : <a href="{{url('admin/kategori', $produk->id_kategori)}}"> {{$produk->kategori->nama}} </a></p>
