@@ -121,14 +121,14 @@ class ClientProdukController extends Controller
 		return redirect('pesanan')->with('danger', 'Data Berhasil di Hapus');
 	}
 
-	function clientfilter(){
+	function Clientfilter(){
 		$nama = request('nama');
 		
 		$data['list_produk'] = Produk::where('nama', 'like' , "%$nama%")->get();
 		
 		$data['nama'] = $nama;
 	
-		return view('client.index', $data);
+		return view('/', $data);
 	}
 
 	

@@ -47,6 +47,7 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 	Route::resource('produk', ProductController::class);
 
 });
+Route::post('/' , [ClientProdukController::class, 'clientfilter']);
 
 
 // Halaman Admin Produk
@@ -68,7 +69,7 @@ Route::put('admin/kategori/{kategori}', [KategoriController::class, 'update']);
 Route::delete('admin/kategori/{kategori}', [KategoriController::class, 'destroy']);
 
 // Halaman Client
-Route::get('index', [ClientProdukController::class, 'index']);
+Route::get('produk', [ClientProdukController::class, 'index']);
 Route::get('/', [ClientProdukController::class, 'index']);
 Route::get('/beli/{produk}', [ClientProdukController::class, 'create']);
 Route::post('beli', [ClientProdukController::class, 'store']);
@@ -79,7 +80,7 @@ Route::put('pesanan/{produk}', [ClientProdukController::class, 'update']);
 Route::delete('pesanan/{produk}', [ClientProdukController::class, 'destroy']);
 
 
-Route::post('client.index' , [ClientProdukController::class, 'clientfilter']);
+
 
 Route::get('client.pesanan', [ClientProdukController::class, 'lihat']);
 Route::get('client.beli', [ClientProdukController::class, 'create']);

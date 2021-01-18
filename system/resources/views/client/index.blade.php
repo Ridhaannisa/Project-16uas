@@ -48,7 +48,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul> 
           <li class="active"><a href="{{ url('/')}}">Home</a></li>
-          <li><a href="#Product">Product</a></li>
+          <li><a href="{{url('produk')}}">Product</a></li>
           <li><a href="{{url('pesanan')}}">Pesanan</a></li>
           <li><a href="{{ url('login')}}">Login</a></li>
            <li><a href="{{ url('registrasi')}}">Registrasi</a></li>
@@ -86,12 +86,12 @@
             Filter
             </div>
           <div class="card-body">
-          <form action="{{url('client.index')}}" method="post">
+          <form action="{{url('/')}}" method="post">
             @csrf
 
             <div class="form-group">
               <label for="" class="control-label">Nama Produk</label>
-              <input type="text" class="form-control" name="nama" value="{{$nama ?? ''}}">
+              <input type="text" class="form-control" name="nama" value="{{$nama ?? ""}}">
             </div>
             <button class="btn btn-dark float-right"><i class="ri-search-line"></i> Filter</button>
           </form>

@@ -8,6 +8,7 @@ use App\Models\Provinsi;
 use App\Models\Kabupaten;
 use App\Models\Kecamatan;
 use App\Models\Desa;
+use App\Models\ClientProduk;
 
 /**
  * 
